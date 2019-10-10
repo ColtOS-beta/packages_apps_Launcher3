@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Application name -->
-    <string name="crdroid_app_name" translatable="false">ColtOS Home</string>
+    <string name="crdroid_app_name" translatable="false">ColtOS Launcher</string>
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
@@ -359,4 +359,11 @@
 
     <!-- QSB -->
     <string name="qsb_search_hint">Search this phone and more…</string>
+
+    <!-- About info -->
+    <string name="about_rice_title" translatable="false">Colt Launcher</string>
+    <string name="about_thanks_cat">Special thanks to</string>
+    <string name="about">About</string>
+    <string name="about_summary">Info about the Colt Launcher</string>
+    <string name="about_app_version">Version 1.0</string>
 </resources>
