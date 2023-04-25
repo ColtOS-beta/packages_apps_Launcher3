@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.annotation.IntDef;
 import androidx.annotation.Nullable;
@@ -40,6 +41,7 @@ import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.launcher3.util.MultiValueAlpha;
 import com.android.launcher3.util.NavigationMode;
+import com.android.launcher3.util.RandomResUtils;
 import com.android.launcher3.util.ShakeUtils;
 import com.android.launcher3.util.VibratorWrapper;
 import com.android.quickstep.TaskOverlayFactory.OverlayUICallbacks;
@@ -213,6 +215,16 @@ public class OverviewActionsView<T extends OverlayUICallbacks> extends FrameLayo
             VibratorWrapper.INSTANCE.get(getContext()).vibrate(VibratorWrapper.EFFECT_CLICK);
             mCallbacks.onClearAllTasksRequested();
         }
+        
+	    if (mCallbacks != null && findViewById(R.id.action_screenshot).getVisibility() == VISIBLE) {
+	        mCallbacks.onClearAllTasksRequested();
+            Toast.makeText(mContext, RandomResUtils.getRandomString(
+                mContext.getResources(),
+                R.array.random_msg_after_shake,
+                mContext.getResources().getInteger(R.integer.random_msg_max)),
+                Toast.LENGTH_SHORT).show();
+	        setCallbacks(null); // Clear the listener after shake
+	    }
     }
 
     /**
