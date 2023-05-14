@@ -370,4 +370,6 @@
     <string name="about">About</string>
     <string name="about_summary">Info about the Colt Launcher</string>
     <string name="about_app_version">Version 1.0</string>
+
+    <string name="intent_no_app_clock_found">Unable to find calendar or clock activity</string>
 </resources>
