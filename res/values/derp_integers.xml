@@ -15,5 +15,5 @@
   ~ limitations under the License
   -->
 <resources>
-    <integer name="random_msg_max">1</integer>
+    <integer name="random_msg_max">18</integer>
 </resources>
